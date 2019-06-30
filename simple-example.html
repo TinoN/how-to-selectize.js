@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://selectize.github.io/selectize.js/js/selectize.js"></script>
+</head>
+<body>
+
+    <input type="text" name="tags" id="tags">
+
+    <script>
+        var tagItems = [
+
+        {
+            name: "einsName",
+            label: "einsLabel",
+            search: "einsSearch"
+        },
+        {
+            name: "zweiName",
+            label: "zweiLabel",
+            search: "zweiSearch"
+        },
+        {
+            name: "dreiName",
+            label: "dreiLabel",
+            search: "dreiSearch"
+        }
+
+        ];
+
+        $('#tags').selectize({
+            delimiter: ',',
+            persist: false,
+            options: tagItems,
+            valueField: 'name',
+            labelField: 'label',
+            searchField: 'search',
+            placeholder: 'write tag here',
+
+            create: function(input) {
+                return {
+                    name: input,
+                    label: input,
+                    search: input
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
