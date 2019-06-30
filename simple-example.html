@@ -10,23 +10,34 @@
 
     <input type="text" name="tags" id="tags">
 
+    <a href="https://github.com/selectize/selectize.js/blob/master/docs/usage.md">
+        Options: the list of objects to display. Each object must have a property with an unique value to identify the option; the property name is defined by the valueField setting. Option objects must also have a property with the label to display (as tag, in the drop down, etc.); the property name is defined by the labelField setting. The options can have other properties, ignored, unless referenced by other settings, like sortField or searchField.
+    </a>
     <script>
+        // tagItems is object to be used in list that will be displayed
+        // "Options: the list of objects to display."
+        // options: tagItems
         var tagItems = [
-
+        // object 1
         {
-            name: "einsName",
-            label: "einsLabel",
-            search: "einsSearch"
+            // Each object must have a property with an unique value to identify the option; the property name is defined by the valueField setting.
+            name: "oneName",   //valueField
+            // Option objects must also have a property with the label to display; the property name is defined by the labelField setting
+            label: "oneLabel", //labelField
+            // The options can have other properties, ignored, unless referenced by other settings, like sortField or searchField.
+            search: "oneSearch"    //searchField
         },
+        // object 2
         {
-            name: "zweiName",
-            label: "zweiLabel",
-            search: "zweiSearch"
+            name: "twoName",   //valueField
+            label: "twoLabel", //labelField
+            search: "twoSearch"    //serchField
         },
+        // object 3
         {
-            name: "dreiName",
-            label: "dreiLabel",
-            search: "dreiSearch"
+            name: "threName",   //valueField
+            label: "threLabel", //labelField
+            search: "threSearch"    //searchField
         }
 
         ];
@@ -35,16 +46,17 @@
             delimiter: ',',
             persist: false,
             options: tagItems,
-            valueField: 'name',
-            labelField: 'label',
-            searchField: 'search',
+            valueField: 'name', //according to naming convention in above objects
+            labelField: 'label',    //according to naming convention in above objects
+            searchField: 'search',  //according to naming convention in above objects
             placeholder: 'write tag here',
-
             create: function(input) {
                 return {
-                    name: input,
-                    label: input,
-                    search: input
+                    // we create a new object according to out conventions above
+                    // input tell us that it compes from the input field
+                    name: input,    //according to naming convention in above objects
+                    label: input,   //according to naming convention in above objects
+                    search: input   //according to naming convention in above objects
                 }
             }
         });
