@@ -1,8 +1,8 @@
 # how-to-selectize.js
-A basic example on how to use selectize.js (for better understanding)
+A basic example on how to use selectize.js with Laravel (for better understanding)
 
-## I was trying to figure out how to use selectize.js with Laravel and rtconner tagging
-[How To Laravel and Tagging](https://laravel-news.com/how-to-add-tagging-to-your-laravel-app)
+## I was trying to figure out how to use [selectize.js](https://selectize.github.io/selectize.js/) with Laravel and [rtconner tagging](https://github.com/rtconner/laravel-tagging)
+[Tutorial example: How To add tagging to laravel](https://laravel-news.com/how-to-add-tagging-to-your-laravel-app)
 
-    - Couldnt figure out how selectize actually worked.
-    - So I created some HTML docs to help me remember next time
+    - Couldn't figure out how selectize.js actually works
+    - Created some HTML docs to help me remember next time
