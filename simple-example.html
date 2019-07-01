@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta charset="UTF-8">
+    <title>selectize.js - Simple Example</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="https://selectize.github.io/selectize.js/js/selectize.js"></script>
@@ -44,7 +45,7 @@
 
         $('#tags').selectize({
             delimiter: ',',
-            persist: false,
+            persist: false, // If false, items created by the user will not show up as available options once they are unselected (in the object/optionsList.
             options: tagItems,
             valueField: 'name', //according to naming convention in above objects
             labelField: 'label',    //according to naming convention in above objects
@@ -59,7 +60,7 @@
                     search: input   //according to naming convention in above objects
                 }
             }
-        });
+        }, tagItems);
     </script>
 
 </body>
