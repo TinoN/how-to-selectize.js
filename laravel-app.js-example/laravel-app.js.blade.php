@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>selectize.js - Laravel Exmaple</title>
+    <title>selectize.js - Laravel Example</title>
 
     <script src="laravel-app.js-example/app.js"></script>
 </head>
 <body>
 
 <!--
-    tags provided by BooksController
+    $tags provided by BooksController
     public function edit(Book $book)
     {
         $tags = $book->tags->pluck('name');
